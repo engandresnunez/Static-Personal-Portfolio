@@ -1,0 +1,191 @@
+/*------------Google Fonts------------*/
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;700&family=Space+Mono:ital@1&display=swap');
+
+/*------------Variables------------*/
+:root {
+    --color-body: #000000;
+    --color-heading: #1a1a1a;
+    --color-base1: #8585ad;
+    --color-base2: white;
+    --color-brand1: #ff944d;
+    --color-brand2: #ff6600;
+    --sidebar-width: 240px;
+    --font-base: "Nunito Sans";
+}
+
+body {
+    background-color: var(--color-base2) !important;
+    color: var(--color-body) !important;
+    font-family: var(--font-base), sans-serif;
+}
+
+h1, h2,h3,h4,h5,h6 {
+    color: var(--color-heading) !important;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-base2) !important;
+    transition: all 0.5s ease;
+}
+
+a:hover{
+    color: var(--color-heading) !important;
+    /* background-color: white !important; */
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand2) !important;
+}
+
+.bg-base {
+    background-color: var(--color-base1) !important;
+    color: white !important;
+}
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgb(0, 0, 0, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: 6px 6px 0 0 var(--color-brand1);
+}
+
+.iconbox {
+ width: 60px;
+ height: 60px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-size: 30px;
+ background-color: var(--color-base1);
+}
+
+
+/* NAVBAR */
+.navbar {
+    background-color: var(--color-base1) !important;
+}
+
+.navbar .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-brand1) !important;
+}
+
+.navbar .nav-link.active {
+    color: var(--color-brand2) !important;
+}
+
+@media (min-width: 992px){
+   .navbar {
+     min-height: 100vh;
+     width: var(--sidebar-width);
+     background: linear-gradient(rgb(89, 89, 89, 0.8), rgb(89, 89, 89, 0.8)), url(../images/backgroundcityphoto.jpg);
+     background-size: cover;
+     background-position: center;
+   }
+
+   .navbar-brand img {
+    border: 5px solid var(--color-heading) !important;
+   }
+
+   /* MAIN CONTENT */
+   #main-content {
+    padding-left: 260px;
+  }  
+
+
+}
+
+/* HOME SECTION */
+/* BUTTONS */
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand1) !important;
+    color: var(--color-body) !important;
+    border-color: var(--color-brand1) !important;
+}
+
+.btn-brand:hover, .btn-brand:focus {
+    background-color: var(--color-brand2) !important;
+    color: var(--color-base1) !important;
+    border-color: var(--color-brand2) !important;
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative; 
+    color: var(--color-heading) !important;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--color-brand1) !important;
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.5s;
+}
+
+.link-custom:hover::after {
+    width: 200%;
+}
+
+/*Card design in work section*/
+.card-custom .card-custom-image {
+   overflow: hidden;
+}
+
+.card-custom .card-custom-image {
+    transition: all 0.5s ease;
+}
+
+.card-custom:hover  .card-custom-image img {
+   transform: scale(1.1);
+}
+
+#contact .formcontrol {
+    background-color: var(--color-base1) !important;
+    color: var(--color-body) !important;
+}
+
+#contact .formcontrol:focus {
+   border-color: var(--color-brand1)!important;
+   box-shadow: none;
+}
+
+.social-icons a {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-base2) !important;
+}
